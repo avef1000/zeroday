@@ -31,7 +31,6 @@ defusedxml==0.7.1
 dirsearch==0.4.3.post1
 distro==1.9.0
 Django==5.1.4
-docutils==0.21.2
 executing==2.1.0
 fastapi==0.115.6
 Flask==3.1.0
