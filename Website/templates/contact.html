@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Zero Day Security</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/">
+                <img src="/static/logo.png" alt="Zero Day Security Logo" class="logo">
+                <h1 class="title">Zero Day Security</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/team">Our Team</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+        </div>
+    </header>
+
+    <section id="contact">
+        <div class="container">
+            <h1 class="contactTitle" data-aos="fade-up">Contact Us</h1>
+            <p class="bk2you" data-aos="fade-up">We will get back to you asap!</p>
+            <form id="contactForm" action="/submit-form" method="POST">
+                <div class="name-fields">
+                    <input type="text" name="firstName" class="firstName" data-aos="fade-up" placeholder="First Name" required>
+                    <input type="text" name="lastName" class="lastName" data-aos="fade-up" placeholder="Last Name" required>
+                </div>
+                <input type="email" name="email" class="email" data-aos="fade-up" data-aos-delay="400" placeholder="Email" required>
+                <input type="text" name="phone" class="phone" data-aos="fade-up" data-aos-delay="400" placeholder="Phone" required>
+                <button type="submit" data-aos="fade-up">Send</button>
+                <p class="footer-text" data-aos="fade-up">You may also email us at lwilliams@zerodaysecurity.org</p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Zero Day Security. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        $(document).ready(function () {
+            $('#contactForm').on('submit', function (e) {
+                e.preventDefault(); // Prevent form from submitting normally
+
+                // Send the form data via AJAX
+                $.ajax({
+                    url: '/submit-form',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        if (response.success) {
+                            alert(response.message); // Show popup
+                        } else {
+                            alert('Failed to send email. Please try again.');
+                        }
+                    },
+                    error: function () {
+                        alert('An error occurred while sending your message.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+    

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Day Security</title>
+    <meta name="description" content="Zero Day Security - Protecting your digital future with cutting-edge cybersecurity solutions.">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/">
+                <h1 class="title">Zero Day Security</h1>
+                <img src="/static/logo.png" alt="Zero Day Security Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/team">Our Team</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+    </header>
+
+
+    <main class="account-section">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="/">Home</a> &raquo; 
+                {% if current_user.role == 'employee' %}
+                    <span>Employee Dashboard</span>
+                {% else %}
+                    <span>My Account</span>
+                {% endif %}
+            </nav>
+            <h1 class="section-title">
+                {% if current_user.role == 'employee' %}
+                    Employee Dashboard
+                {% else %}
+                    My Account
+                {% endif %}
+            </h1>
+            <div class="account-layout">
+                <aside class="account-sidebar">
+                    <ul>
+                        <li><a href="/account/dashboard" class="active"><span class="icon dashboard"></span> Dashboard</a></li>
+                        <li><a href="/account/contracts"><span class="icon contracts"></span> My Contracts</a></li>
+                        <li><a href="/account/appointments"><span class="icon appointments"></span> My Appointments</a></li>
+                        <li><a href="/account/appointments"><span class="icon schedule"></span> Schedule Appointments</a></li>
+                        <li><a href="/account/history"><span class="icon history"></span> History</a></li>
+                        <li><a href="/account/help"><span class="icon help"></span> Help</a></li>
+                        <li><a href="/account/settings"><span class="icon settings"></span> Account Settings</a></li>
+                        <li><a href="/logout"><span class="icon logout"></span> Logout</a></li>
+                    </ul>
+                </aside>
+                <section class="account-content">
+                    <p>Hello, <strong>{{ current_user.username }}</strong> (Role: {{ current_user.role.capitalize() }}) (<a href="/logout">Log out</a>)!</p>
+                    <p>
+                        From your account dashboard you can view your 
+                        <a href="/account/orders">recent orders</a>, manage your 
+                        <a href="/account/address">billing address</a>, and 
+                        <a href="/account/details">edit your password and account details</a>.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Zero Day Security. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

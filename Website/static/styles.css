@@ -1,0 +1,829 @@
+/* Global Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f0f8ff; /* Light Blue */
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #1a73e8; /* Bright Blue */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+header {
+    background: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap; /* Allow wrapping for the .title */
+}
+
+/* Title Styling */
+/* Header Styles */
+header {
+    background: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap; /* Allow wrapping for the title */
+
+}
+
+/* Logo Styling */
+/* Logo Styling */
+header .logo {
+    height: 120px; /* Enlarges logo on hover */
+    position: absolute; /* Removes it from the normal flow of text */
+    left: 20px; /* Adjust logo position */
+    top: 27px; /* Adjust position vertically */
+    z-index: 2; /* Ensure the logo stays above other content */
+    transition: height 0.5s ease, transform 0.3s ease; /* Smooth transition for height and transform */
+}
+
+/* Hover effect for logo */
+header .logo:hover {
+    height: 135px; /* Enlarges logo on hover */
+    position: absolute; /* Removes it from the normal flow of text */
+    left: 20px; /* Adjust logo position */
+    top: 20px; /* Adjust position vertically */
+    transform: scale(1.1); /* Optional: slightly scale the logo for a smoother effect */
+    content: url('logoHovered.png'); /* Changes image on hover */
+}
+
+
+/* Title Styling */
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 100%;
+    line-height: 1;
+    z-index: 1; /* Ensure title stays below the logo */
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.section-title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 100%;
+    line-height: 1;
+    z-index: 1; /* Ensure title stays below the logo */
+    transition: font-size 0.3s ease, color 0.3s ease;
+    position: relative;
+    left: 640px;
+}
+
+.title:hover {
+    font-size: 6rem;
+    color: #1a73e8;
+}
+
+
+/* Navigation Styling */
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-weight: 600;
+    font-size: 35px;
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    font-size: 47px;
+    color: #1a73e8;
+}
+
+
+ 
+
+/* Hero Section */
+#hero {
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.contactTitle{
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: realtive;
+    top: 18vh;
+    left: 6vw
+}
+
+.serviceTitles{
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: realtive;
+    top: 18vh;
+    left: 6vw
+}
+
+
+.bk2you{
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: realtive;
+    top: 18vh;
+    left: 6vw
+}
+
+#hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.cta-button {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e65c00; /* Darken orange on hover */
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+}
+
+.alt-background {
+    background-color: #f9f9f9;
+}
+
+.service-grid, .testimonial-grid, .team-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.service, .testimonial, .team-member {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* New styles for service boxes with borders */
+.service-category {
+    margin-bottom: 50px;
+}
+
+.service-box {
+    border: 2px solid #1a73e8; /* Bright Blue border */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+    border-color: #ff6600; /* Change to orange when hovered */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Update styles for buttons instead of h4 tags */
+button.service-button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #333;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    padding: 10px 0;
+    margin: 10px 0;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold; /* Ensure the button text is bold */
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+button.service-button:hover {
+    color: #1a73e8; /* Change color to blue on hover */
+    font-size: 20px; /* Slightly increase text size */
+}
+
+button.service-button:focus {
+    outline: none;
+}
+
+/* h2 */
+h2 a{
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333; /* Default color is black */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+h2 a:hover {
+    color: #1a73e8; /* Change to bright blue when hovered */
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333; /* Default color is black */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+h2:hover {
+    color: #1a73e8; /* Change to bright blue when hovered */
+}
+
+/* Team and Testimonial Sections */
+.testimonial-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center; /* Center all text */
+}
+
+.username {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center; /* Center all text */
+}
+
+.password {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center; /* Center all text */
+}
+
+
+/* Styling for all input and textarea elements */
+form input, 
+form textarea {
+    padding: 15px; /* Increase padding for taller boxes */
+    font-size: 16px;
+    height: 40px; /* Explicitly set a taller height for inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center; /* Center text inside input fields */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for focus */
+}
+
+/* Adjacent firstName and lastName inputs */
+form .name-fields {
+    display: flex;
+    gap: 20px; /* Space between firstName and lastName fields */
+    justify-content: center; /* Center name fields as a group */
+}
+
+form .name-fields input {
+    width: 270px; /* Fixed width for name fields */
+    flex: 1; /* Distribute space evenly if parent changes size */
+    padding: 15px; /* Match taller input padding */
+    font-size: 16px; /* Match font size */
+    height: 40px; /* Consistent height for name fields */
+    border: 1px solid #ccc; /* Consistent border */
+    border-radius: 5px; /* Consistent border radius */
+    text-align: center; /* Center text inside fields */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Add focus styling */
+form .name-fields input:focus {
+    border-color: #1a73e8; /* Bright blue border on focus */
+    box-shadow: 0 0 5px rgba(26, 115, 232, 0.5); /* Subtle blue shadow */
+    outline: none; /* Remove default outline */
+}
+
+
+
+/* Button styling */
+form button {
+    background-color: #ff6600;
+    color: white;
+    padding: 15px; /* Adjust for consistent height with input fields */
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Center button text */
+}
+
+form button:hover {
+    background-color: #e65c00; /* Darken on hover */
+}
+
+/* Placeholder text for input titles */
+form input::placeholder {
+    color: #888; /* Light gray for placeholder text */
+    font-size: 16px; /* Match input text size */
+    text-align: center; /* Center placeholder text */
+
+}
+
+form textarea::placeholder {
+    color: #888; /* Placeholder for textarea */
+    font-size: 20px;
+    text-align: center; /* Center placeholder text */
+}
+
+
+/* Add icons inside inputs */
+form input.email {
+    background-image: url('/static/icons/mail.png'); /* Replace with actual icon URLs */
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: 12px center;
+    padding-left: 40px; /* Adjust padding for icon space */
+}
+
+form input.password {
+    background-image: url('/static/icons/lock.png'); /* Replace with actual icon URLs */
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 12px center;
+    padding-left: 40px; /* Adjust padding for icon space */
+}
+
+
+form input.phone {
+    background-image: url('/static/icons/phone.png'); /* Replace with actual icon URLs */
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: 12px center;
+    padding-left: 40px; /* Adjust padding for icon space */
+}
+form .name-fields input {
+    background-image: url('/static/icons/person.png'); /* Replace with actual icon URLs */
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 12px center;
+    padding-left: 40px; /* Adjust padding for icon space */
+}
+
+
+
+form .username input {
+    background-image: url('/static/icons/person.png'); /* Replace with actual icon URLs */
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 12px center;
+    padding-left: 40px; /* Adjust padding for icon space */
+
+}
+
+
+
+form .password input {
+    background-image: url('/static/icons/lock.png'); /* Replace with actual icon URLs */
+    background-repeat: no-repeat;
+    background-size: px;
+    background-position: 12px center;
+    padding-left: 40px; /* Adjust padding for icon space */
+}
+
+/* Center all labels */
+form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    text-align: center; /* Center label text */
+}
+
+
+
+
+/* Placeholder styling */
+form input::placeholder, 
+form textarea::placeholder {
+    font-size: 16px; /* Match existing input font size */
+    color: #aaa; /* Lighter color for placeholder text */
+}
+
+form input:focus::placeholder, 
+form textarea:focus::placeholder {
+    color: transparent; /* Hide placeholder text on focus */
+}
+
+/* Login and Register Form */
+form input[type="text"], form input[type="password"], form input[type="email"] {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus, form input[type="password"]:focus, form input[type="email"]:focus {
+    border-color: #1a73e8; /* Focus color is bright blue */
+}
+
+form input[type="submit"], .register-button, .login-button {
+    background-color: #1a73e8;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover, .register-button:hover, .login-button:hover {
+    background-color: #0056b3; /* Darken blue on hover */
+}
+
+.login{
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333; /* Default color is black */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.ourTeam{
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333; /* Default color is black */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Styling for login button in the header */
+.auth-links {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.auth-links .login-btn {
+    background-color: #1a73e8;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 2vh;
+    left: 95vw;
+}
+
+.message{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: red;
+}
+
+.error{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: red;
+}
+
+.success{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: green;
+}
+
+
+.auth-links .login-btn:hover {
+    background-color: #005bb5;
+}
+
+.register-prompt {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+
+.register-link {
+    color: #1a73e8; /* Bright Blue */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register-link:hover {
+    color: #0056b3; /* Darker blue when hovered */
+}
+
+.login-prompt {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.login-link {
+    color: #1a73e8; /* Bright Blue */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    color: #0056b3; /* Darker blue when hovered */
+}
+
+/* General Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #0073e6;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Section Title */
+.section-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Layout */
+.account-layout {
+
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Sidebar */
+.account-sidebar {
+    font-family: 'Roboto', sans-serif;
+    width: 250px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.account-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.account-sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.account-sidebar ul li a {
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.account-sidebar ul li a .icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.dashboard{
+    background-image: url('/static/icons/dashboard.png'); /* Replace with actual icon URLs */
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 12px center;
+    padding-left: 15px; /* Adjust padding for icon space */
+}
+
+.appointments{
+    background-image: url('/static/icons/appointments.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 12px center;
+    padding-left: 15px; /* Adjust padding for icon space */
+}
+
+.contracts{
+    background-image: url('/static/icons/contract.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 12px center;
+    padding-left: 15px; /* Adjust padding for icon space */
+}
+
+.schedule{
+    background-image: url('/static/icons/schedule.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 12px center;
+    padding-left: 15px; /* Adjust padding for icon space */
+}
+
+.history{
+    background-image: url('/static/icons/history.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 12px center;
+    padding-left: 15px; /* Adjust padding for icon space */
+}
+
+.help{
+    background-image: url('/static/icons/help.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 12px center;
+    padding-left: 15px; /* Adjust padding for icon space */
+}
+
+.settings{
+    background-image: url('/static/icons/settings.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 12px center;
+    padding-left: 15px; /* Adjust padding for icon space */
+}
+
+.logout{
+    background-image: url('/static/icons/exit.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 12px center;
+    padding-left: 15px; /* Adjust padding for icon space */
+}
+
+.account-sidebar ul li a.membership .icon {
+    background-image: url('/static/icons/membership.png');
+}
+
+.account-sidebar ul li a.subscription .icon {
+    background-image: url('/static/icons/subscription.png');
+}
+
+.account-sidebar ul li a.downloads .icon {
+    background-image: url('/static/icons/downloads.png');
+}
+
+.account-sidebar ul li a.address .icon {
+    background-image: url('/static/icons/address.png');
+}
+
+.account-sidebar ul li a.account-details .icon {
+    background-image: url('/static/icons/account-details.png');
+}
+
+.account-sidebar ul li a.logout .icon {
+    background-image: url('/static/icons/logout.png');
+}
+
+.account-sidebar ul li a.active,
+.account-sidebar ul li a:hover {
+    background: #0073e6;
+    color: #fff;
+}
+
+/* Main Content */
+.account-content {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.account-content a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.account-content a:hover {
+    text-decoration: underline;
+}
