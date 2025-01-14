@@ -248,10 +248,7 @@ button.service-button {
     transition: color 0.3s ease, font-size 0.3s ease;
 }
 
-button.service-button:hover {
-    color: #1a73e8; /* Change color to blue on hover */
-    font-size: 20px; /* Slightly increase text size */
-}
+
 
 button.service-button:focus {
     outline: none;
@@ -825,6 +822,7 @@ footer {
 .account-content a:hover {
     text-decoration: underline;
 }
+
 /* Media Queries for Responsiveness */
 @media screen and (max-width: 1200px) {
     .container {
