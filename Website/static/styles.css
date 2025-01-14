@@ -28,50 +28,13 @@ header {
     padding: 10px 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     position: sticky;
     top: 0;
     z-index: 1000;
-    flex-wrap: wrap; /* Allow wrapping for the .title */
+    flex-wrap: wrap; /* Added for better responsiveness */
+    padding: 0 20px; /* Add spacing inside the header */
 }
-
-/* Title Styling */
-/* Header Styles */
-header {
-    background: #000000;
-    color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    flex-wrap: wrap; /* Allow wrapping for the title */
-
-}
-
-/* Logo Styling */
-/* Logo Styling */
-header .logo {
-    height: 120px; /* Enlarges logo on hover */
-    position: absolute; /* Removes it from the normal flow of text */
-    left: 20px; /* Adjust logo position */
-    top: 27px; /* Adjust position vertically */
-    z-index: 2; /* Ensure the logo stays above other content */
-    transition: height 0.5s ease, transform 0.3s ease; /* Smooth transition for height and transform */
-}
-
-/* Hover effect for logo */
-header .logo:hover {
-    height: 135px; /* Enlarges logo on hover */
-    position: absolute; /* Removes it from the normal flow of text */
-    left: 20px; /* Adjust logo position */
-    top: 20px; /* Adjust position vertically */
-    transform: scale(1.1); /* Optional: slightly scale the logo for a smoother effect */
-    content: url('logoHovered.png'); /* Changes image on hover */
-}
-
 
 /* Title Styling */
 .title {
@@ -86,9 +49,30 @@ header .logo:hover {
     letter-spacing: 2px;
     width: 100%;
     line-height: 1;
-    z-index: 1; /* Ensure title stays below the logo */
+    z-index: 1;
     transition: font-size 0.3s ease, color 0.3s ease;
 }
+
+
+/* Logo Styling */
+header .logo {
+    position: absolute; /* Allows precise positioning within the header */
+    top: 50%; /* Center vertically relative to the header's height */
+    left: 20px; /* Position the logo on the left with some spacing */
+    transform: translateY(-50%); /* Vertically aligns the logo's center with the header */
+    height: 120px; /* Base height of the logo */
+    z-index: 2; /* Ensures the logo stays above other elements */
+    transition: height 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect for Logo */
+header .logo:hover {
+    height: 140px; /* Logo size becomes 4 times bigger on hover */
+    transform: translateY(-50%) scale(1.1); /* Slightly enlarge further for a smoother hover effect */
+    content: url('logoHovered.png'); /* Changes image on hover (optional) */
+}
+
+
 
 .section-title{
     font-family: 'Roboto', sans-serif;
@@ -242,9 +226,11 @@ section {
 }
 
 .service-box:hover {
-    border-color: #ff6600; /* Change to orange when hovered */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    border-color: #ff6600; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
 }
+
 
 /* Update styles for buttons instead of h4 tags */
 button.service-button {
@@ -373,7 +359,7 @@ form .name-fields {
 }
 
 form .name-fields input {
-    width: 270px; /* Fixed width for name fields */
+    width: 600px; /* Fixed width for name fields */
     flex: 1; /* Distribute space evenly if parent changes size */
     padding: 15px; /* Match taller input padding */
     font-size: 16px; /* Match font size */
@@ -425,7 +411,7 @@ form textarea::placeholder {
 }
 
 
-/* Add icons inside inputs */
+
 form input.email {
     background-image: url('/static/icons/mail.png'); /* Replace with actual icon URLs */
     background-repeat: no-repeat;
@@ -470,14 +456,14 @@ form .username input {
 }
 
 
-
 form .password input {
-    background-image: url('/static/icons/lock.png'); /* Replace with actual icon URLs */
+    background-image: url('/static/icons/lock.png');
     background-repeat: no-repeat;
-    background-size: px;
+    background-size: 30px; /* Correct the value here */
     background-position: 12px center;
-    padding-left: 40px; /* Adjust padding for icon space */
+    padding-left: 40px;
 }
+
 
 /* Center all labels */
 form label {
@@ -563,17 +549,29 @@ footer {
 }
 
 .auth-links .login-btn {
-    background-color: #1a73e8;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    position: absolute;
-    top: 2vh;
-    left: 95vw;
+    background-color: #1a73e8; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Inner spacing */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Text size */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    position: fixed; /* Fixed positioning for consistent placement */
+    top: 2%; /* Top position (percentage for responsiveness) */
+    right: 2%; /* Right position for better control */
+    z-index: 10; /* Ensure it's on top of other content */
 }
+
+.auth-links .login-btn:hover {
+    background-color: #1558b0; /* Darker blue for hover */
+    transform: scale(1.05); /* Subtle zoom effect */
+}
+
+.auth-links .login-btn:focus {
+    outline: 3px solid #fff; /* Visible outline for keyboard navigation */
+    outline-offset: 3px;
+}
+
 
 .message{
     text-align: center;
@@ -826,4 +824,253 @@ footer {
 
 .account-content a:hover {
     text-decoration: underline;
+}
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1200px) {
+    .container {
+        padding: 0 5.8px; /* 58% of 10px */
+    }
+
+    .title {
+        font-size: 3.75rem; /* 58% of 2rem */
+    }
+
+    .title:hover {
+        font-size: 4rem; /* 58% of 2rem */
+    }
+
+    header {
+        padding: 4.64px 9.28px; /* 58% of 8px and 16px */
+    }
+
+    header nav ul li a {
+        font-size: 29px; /* 58% of 20px */
+    }
+
+    header nav ul li a:hover {
+        font-size: 39px; /* 58% of 20px */
+    }
+
+    header {
+        height: 100px; /* Even smaller header for very small screens */
+    }
+
+    header .logo {
+        height: 87.5px; /* Further reduce logo size for smaller screens */
+        left: 25px; /* Adjust position further */
+        top: 50px;
+    }
+
+    header .logo:hover {
+        height: 93.75px; /* Further reduce logo size for smaller screens */
+        left: 25px; /* Adjust position further */
+        top: 33px;
+    }
+
+    #hero {
+        height: 500px; /* 58% of 500px */
+    }
+
+
+    .cta-button {
+        font-size: 30px; /* 58% of 12px */
+        padding: 3.48px 6.96px; /* 58% of 6px and 12px */
+    }
+
+    #hero h1 {
+        font-size: 52.2px; /* 58% of 36px */
+    }
+
+
+
+    form {
+        width: 600px;
+        padding: 0 5.8px; /* 58% of 10px */
+    }
+
+    form .name-fields input {
+        width: 45%; /* Make the name fields smaller (45% of form width) */
+        flex: 1;
+        padding: 12px; /* Adjust padding for smaller fields */
+        font-size: 14px; /* Smaller font size */
+        height: 35px; /* Adjust height for smaller input boxes */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    form .name-fields input:focus {
+        border-color: #1a73e8;
+        box-shadow: 0 0 5px rgba(26, 115, 232, 0.5);
+        outline: none;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 5.8px; /* 58% of 10px */
+    }
+
+    .title {
+        font-size: 2.4rem; /* 58% of 2rem */
+    }
+
+    .title:hover {
+        font-size: 2.56rem; /* 58% of 2rem */
+    }
+
+    header {
+        padding: 4.64px 9.28px; /* 58% of 8px and 16px */
+    }
+
+    header nav ul li a {
+        font-size: 18.56px; /* 58% of 20px */
+    }
+
+    header nav ul li a:hover {
+        font-size: 24.96px; /* 58% of 20px */
+    }
+
+    header {
+        height: 64px; /* Even smaller header for very small screens */
+    }
+
+    header .logo {
+        height: 56px; /* Further reduce logo size for smaller screens */
+        left: 25px; /* Adjust position further */
+        top: 35px;
+    }
+
+    header .logo:hover {
+        height: 60px; /* Further reduce logo size for smaller screens */
+        left: 25px; /* Adjust position further */
+        top: 35px;
+    }
+
+    #hero {
+        height: 290px; /* 58% of 500px */
+    }
+
+
+    .cta-button {
+        font-size: 24px; /* 58% of 12px */
+        padding: 3.48px 6.96px; /* 58% of 6px and 12px */
+    }
+
+    #hero h1 {
+        font-size: 33.408px; /* 58% of 36px */
+    }
+
+    .service-grid, .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        width: 350px;
+        padding: 0 5.8px; /* 58% of 10px */
+    }
+
+    form .name-fields input {
+        width: 45%; /* Make the name fields smaller (45% of form width) */
+        flex: 1;
+        padding: 12px; /* Adjust padding for smaller fields */
+        font-size: 14px; /* Smaller font size */
+        height: 35px; /* Adjust height for smaller input boxes */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    form .name-fields input:focus {
+        border-color: #1a73e8;
+        box-shadow: 0 0 5px rgba(26, 115, 232, 0.5);
+        outline: none;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 5.8px; /* 58% of 10px */
+    }
+
+    .title {
+        font-size: 1.5rem; /* 58% of 2rem */
+    }
+
+    .title:hover {
+        font-size: 1.60rem; /* 58% of 2rem */
+    }
+
+    header {
+        padding: 4.64px 9.28px; /* 58% of 8px and 16px */
+    }
+
+    header nav ul li a {
+        font-size: 11.6px; /* 58% of 20px */
+    }
+
+    header nav ul li a:hover {
+        font-size: 15.6px; /* 58% of 20px */
+    }
+
+    header {
+        height: 40px; /* Even smaller header for very small screens */
+    }
+
+    header .logo {
+        height: 35px; /* Further reduce logo size for smaller screens */
+        left: 25px; /* Adjust position further */
+        top: 25px;
+    }
+
+    header .logo:hover {
+        height: 37.5px; /* Further reduce logo size for smaller screens */
+        left: 25px; /* Adjust position further */
+        top: 33px;
+    }
+
+    #hero {
+        height: 290px; /* 58% of 500px */
+    }
+
+
+    .cta-button {
+        font-size: 15px; /* 58% of 12px */
+        padding: 3.48px 6.96px; /* 58% of 6px and 12px */
+    }
+
+    #hero h1 {
+        font-size: 20.88px; /* 58% of 36px */
+    }
+
+    .service-grid{
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        width: 350px;
+        padding: 0 5.8px; /* 58% of 10px */
+    }
+
+    form .name-fields input {
+        width: 45%; /* Make the name fields smaller (45% of form width) */
+        flex: 1;
+        padding: 12px; /* Adjust padding for smaller fields */
+        font-size: 14px; /* Smaller font size */
+        height: 35px; /* Adjust height for smaller input boxes */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    form .name-fields input:focus {
+        border-color: #1a73e8;
+        box-shadow: 0 0 5px rgba(26, 115, 232, 0.5);
+        outline: none;
+    }
 }
