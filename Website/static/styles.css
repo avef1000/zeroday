@@ -871,8 +871,6 @@ footer {
 
     header .logo:hover {
         height: 90px; /* Further reduce logo size for smaller screens */
-        left: -10px; /* Adjust position further */
-        top: 10px;
     }
 
     #hero {
@@ -953,8 +951,6 @@ footer {
 
     header .logo:hover {
         height: 56.5px; /* Further reduce logo size for smaller screens */
-        left: 25px; /* Adjust position further */
-        top: 35px;
     }
 
     #hero {
@@ -1025,8 +1021,7 @@ footer {
 
     header .logo:hover {
         height: 51px; /* Hover effect */
-        left: 5px;
-        top: 15px;
+
     }
 
     header nav ul li a {
@@ -1115,8 +1110,6 @@ footer {
 
     header .logo:hover {
         height: 35.2px; /* Further reduce logo size for smaller screens */
-        left: 25px; /* Adjust position further */
-        top: 25px;
     }
 
     #hero {
