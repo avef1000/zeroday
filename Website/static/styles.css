@@ -37,38 +37,46 @@ header {
 }
 
 /* Title Styling */
+.title-container {
+    display: flex; /* Aligns the title and logo side by side */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    position: relative; /* For positioning the logo within the container */
+    width: 100%; /* Ensures the container takes up full width */
+    height: 100vh; /* Takes full height of the viewport */
+}
+
+/* Title Styling */
 .title {
     font-family: 'Roboto', sans-serif;
     font-size: 5rem;
     font-weight: 700;
     color: #fff;
-    text-align: center;
+    text-align: left; /* Align the title to the left */
     margin: 0;
     padding: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
-    width: 100%;
     line-height: 1;
     z-index: 1;
     transition: font-size 0.3s ease, color 0.3s ease;
+    flex-grow: 1; /* Makes sure the title takes up the available space */
 }
-
 
 /* Logo Styling */
 header .logo {
-    position: absolute; /* Allows precise positioning within the header */
-    top: 50%; /* Center vertically relative to the header's height */
-    left: 20px; /* Position the logo on the left with some spacing */
-    transform: translateY(-50%); /* Vertically aligns the logo's center with the header */
+    position: fixed;
+    top: 3%;
+    left: 20px;
     height: 120px; /* Base height of the logo */
-    z-index: 2; /* Ensures the logo stays above other elements */
-    transition: height 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+    margin-left: 20px; /* Space between the title and logo */
+    transition: height 0.3s ease, transform 0.3s ease;
 }
 
 /* Hover Effect for Logo */
 header .logo:hover {
-    height: 125px; /* Logo size becomes 4 times bigger on hover */
-    transform: translateY(-50%) scale(1); /* Slightly enlarge further for a smoother hover effect */
+    height: 125px; /* Logo size becomes slightly bigger on hover */
+    transform: scale(1); /* Slightly enlarge further for a smoother hover effect */
     content: url('logoHovered.png'); /* Changes image on hover (optional) */
 }
 
@@ -938,7 +946,7 @@ footer {
     header .logo {
         height: 56px; /* Further reduce logo size for smaller screens */
         left: 25px; /* Adjust position further */
-        top: 35px;
+        top: 8px;
     }
 
     header .logo:hover {
@@ -1021,8 +1029,8 @@ footer {
 
     header .logo {
         height: 35px; /* Further reduce logo size for smaller screens */
-        left: 25px; /* Adjust position further */
-        top: 25px;
+        left: 0%; /* Adjust position further */
+        top: 8px;
     }
 
     header .logo:hover {
