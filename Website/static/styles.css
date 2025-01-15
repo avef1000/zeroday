@@ -997,6 +997,84 @@ footer {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 0 6px; /* Adjust padding for smaller screens */
+    }
+
+    .title {
+        font-size: 2rem; /* Smaller font size */
+    }
+
+    .title:hover {
+        font-size: 2.05rem; /* Adjust hover effect */
+    }
+
+    header {
+        padding: 5px 10px; /* Adjust header padding */
+        height: 70px; /* Adjust header height */
+    }
+
+    header .logo {
+        height: 50px; /* Smaller logo size */
+        left: 5px; /* Adjust position */
+        top: 15px;
+    }
+
+    header .logo:hover {
+        height: 51px; /* Hover effect */
+        left: 20px;
+        top: 9px;
+    }
+
+    header nav ul li a {
+        font-size: 16px; /* Smaller font size */
+    }
+
+    header nav ul li a:hover {
+        font-size: 16.5px; /* Hover effect */
+    }
+
+    #hero {
+        height: 300px; /* Adjust hero section height */
+    }
+
+    .cta-button {
+        font-size: 16px; /* Adjust font size */
+        padding: 4px 8px; /* Adjust padding */
+    }
+
+    #hero h1 {
+        font-size: 28px; /* Adjust font size */
+    }
+
+    .service-grid, .testimonial-grid {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    }
+
+    form {
+        width: 280px; /* Adjust form width */
+        padding: 0 5px; /* Adjust padding */
+    }
+
+    form .name-fields input {
+        width: 44%; /* Smaller input width */
+        padding: 8px; /* Adjust padding */
+        font-size: 12px; /* Smaller font size */
+        height: 30px; /* Adjust height */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    form .name-fields input:focus {
+        border-color: #1a73e8;
+        box-shadow: 0 0 5px rgba(26, 115, 232, 0.5);
+        outline: none;
+    }
+}
+
 
 @media screen and (max-width: 480px) {
     .container {
