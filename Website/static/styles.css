@@ -878,6 +878,52 @@ footer {
     }
 
 
+@media screen and (max-width: 900px) {
+    .container {
+        padding: 0 5.8px; /* 58% of 10px */
+    }
+
+    .title {
+        font-size: 3.75rem; /* 58% of 2rem */
+    }
+
+    .title:hover {
+        font-size: 3.85rem; /* 58% of 2rem */
+    }
+
+    header {
+        padding: 4.64px 9.28px; /* 58% of 8px and 16px */
+    }
+
+    header nav ul li a {
+        font-size: 29px; /* 58% of 20px */
+    }
+
+    header nav ul li a:hover {
+        font-size: 39px; /* 58% of 20px */
+    }
+
+    header {
+        height: 100px; /* Even smaller header for very small screens */
+    }
+
+    header .logo {
+        height: 85px; /* Further reduce logo size for smaller screens */
+        left: -10px; /* Adjust position further */
+        top: 10px;
+    }
+
+    header .logo:hover {
+        height: 93.75px; /* Further reduce logo size for smaller screens */
+        left: 25px; /* Adjust position further */
+        top: 33px;
+    }
+
+    #hero {
+        height: 500px; /* 58% of 500px */
+    }
+
+
     .cta-button {
         font-size: 30px; /* 58% of 12px */
         padding: 3.48px 6.96px; /* 58% of 6px and 12px */
@@ -946,7 +992,7 @@ footer {
     header .logo {
         height: 56px; /* Further reduce logo size for smaller screens */
         left: 25px; /* Adjust position further */
-        top: 8px;
+        top: 8  px;
     }
 
     header .logo:hover {
