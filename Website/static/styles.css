@@ -948,7 +948,7 @@ footer {
     header .logo {
         height: 56px; /* Further reduce logo size for smaller screens */
         left: 25px; /* Adjust position further */
-        top: 35px;
+        top: 8px;
     }
 
     header .logo:hover {
