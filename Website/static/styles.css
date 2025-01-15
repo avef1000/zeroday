@@ -831,7 +831,9 @@ footer {
     text-decoration: underline;
 }
 
-/* Media Queries for Responsiveness */
+
+
+
 @media screen and (max-width: 1200px) {
     .container {
         padding: 0 5.8px; /* 58% of 10px */
@@ -854,53 +856,7 @@ footer {
     }
 
     header nav ul li a:hover {
-        font-size: 39px; /* 58% of 20px */
-    }
-
-    header {
-        height: 100px; /* Even smaller header for very small screens */
-    }
-
-    header .logo {
-        height: 87.5px; /* Further reduce logo size for smaller screens */
-        left: 25px; /* Adjust position further */
-        top: 50px;
-    }
-
-    header .logo:hover {
-        height: 93.75px; /* Further reduce logo size for smaller screens */
-        left: 25px; /* Adjust position further */
-        top: 33px;
-    }
-
-    #hero {
-        height: 500px; /* 58% of 500px */
-    }
-
-
-@media screen and (max-width: 900px) {
-    .container {
-        padding: 0 5.8px; /* 58% of 10px */
-    }
-
-    .title {
-        font-size: 3.75rem; /* 58% of 2rem */
-    }
-
-    .title:hover {
-        font-size: 3.85rem; /* 58% of 2rem */
-    }
-
-    header {
-        padding: 4.64px 9.28px; /* 58% of 8px and 16px */
-    }
-
-    header nav ul li a {
-        font-size: 29px; /* 58% of 20px */
-    }
-
-    header nav ul li a:hover {
-        font-size: 39px; /* 58% of 20px */
+        font-size: 30px; /* 58% of 20px */
     }
 
     header {
@@ -914,9 +870,9 @@ footer {
     }
 
     header .logo:hover {
-        height: 93.75px; /* Further reduce logo size for smaller screens */
-        left: 25px; /* Adjust position further */
-        top: 33px;
+        height: 90px; /* Further reduce logo size for smaller screens */
+        left: -10px; /* Adjust position further */
+        top: 10px;
     }
 
     #hero {
@@ -992,7 +948,7 @@ footer {
     header .logo {
         height: 56px; /* Further reduce logo size for smaller screens */
         left: 25px; /* Adjust position further */
-        top: 8  px;
+        top: 35px;
     }
 
     header .logo:hover {
@@ -1069,8 +1025,8 @@ footer {
 
     header .logo:hover {
         height: 51px; /* Hover effect */
-        left: 20px;
-        top: 9px;
+        left: 5px;
+        top: 15px;
     }
 
     header nav ul li a {
